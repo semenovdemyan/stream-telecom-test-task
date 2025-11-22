@@ -7,7 +7,7 @@ export default function Home() {
         <ul>
           <li>
             <p style={{ padding: '0' }}>
-              React-router-dom (для навигации между страницами){' '}
+              React-router-dom (для навигации между страницами)
             </p>
           </li>
           <li>
