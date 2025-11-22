@@ -1,3 +1,37 @@
-{
-	
-}
+[
+  {
+    "surname": "Иванов",
+    "name": "Иван",
+    "middleName": "Иванович",
+    "email": "ivan.ivanov@example.com",
+    "phone": "+7-912-345-67-89"
+  },
+  {
+    "surname": "Петрова",
+    "name": "Мария",
+    "middleName": "Сергеевна",
+    "email": "maria.petrova@example.com",
+    "phone": "+7-913-234-56-78"
+  },
+  {
+    "surname": "Сидоров",
+    "name": "Алексей",
+    "middleName": "Андреевич",
+    "email": "alex.sidorov@example.com",
+    "phone": "+7-914-123-45-67"
+  },
+  {
+    "surname": "Кузнецова",
+    "name": "Ольга",
+    "middleName": "Владимировна",
+    "email": "olga.kuznetsova@example.com",
+    "phone": "+7-915-987-65-43"
+  },
+  {
+    "surname": "Морозов",
+    "name": "Дмитрий",
+    "middleName": "Николаевич",
+    "email": "dmitry.morozov@example.com",
+    "phone": "+7-916-876-54-32"
+  }
+]
