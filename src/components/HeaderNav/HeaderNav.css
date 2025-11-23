@@ -1,0 +1,37 @@
+.header {
+  padding: 10px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+}
+
+.header-nav__menu {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.header-nav__link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.header-nav__link--active {
+  color: #646cff;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .header-nav__menu {
+    gap: 10px;
+  }
+
+  .header-nav__link {
+    font-size: 14px;
+  }
+}

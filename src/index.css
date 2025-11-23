@@ -24,10 +24,12 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 h1 {
@@ -68,6 +70,15 @@ button:focus-visible {
 }
 
 .container {
-	margin: 0 auto;
-	padding: 2rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.li {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
 }

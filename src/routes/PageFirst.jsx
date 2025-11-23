@@ -1,5 +1,5 @@
 export default function PageFirst() {
-  const codeColor = '#98c9f4';
+  const codeColor = '#535bf2';
 
   return (
     <>
@@ -11,7 +11,7 @@ export default function PageFirst() {
         То&nbsp;есть не&nbsp;сохранять явно контекст родителя в&nbsp;переменную.
       </h2>
 
-      <pre>
+      <pre style={{ background: '#1e1e1e', padding: '25px', borderRadius: '25px' }}>
         <code style={{ color: codeColor }}>
           {`function parent() {
   var that = this;
@@ -39,7 +39,7 @@ export default function PageFirst() {
         <br />
         <code style={{ color: codeColor }}>that.multiplier = 3;</code> создаёт
         или изменяет свойство{' '}
-        <code style={{ color: codeColor }}>multiplier</code>
+        <code style={{ color: codeColor }}>multiplier</code>{' '}
         объекта, на&nbsp;который ссылается{' '}
         <code style={{ color: codeColor }}>that</code>. <br />
         <br />

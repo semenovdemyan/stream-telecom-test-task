@@ -1,5 +1,7 @@
+import Toggle from "@/components/Toggle";
+
 export default function PageThird() {
-  const codeColor = '#98c9f4';
+  const codeColor = '#535bf2';
   return (
     <>
       <h1>Тестовая задача</h1>
@@ -23,9 +25,9 @@ export default function PageThird() {
         </ul>
         <h2>Результат:</h2>
       </section>
-
+<Toggle />
       <section>
-				
+
 			</section>
     </>
   );

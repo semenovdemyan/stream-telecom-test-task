@@ -1,5 +1,5 @@
 export default function PageSecond() {
-  const codeColor = '#98c9f4';
+  const codeColor = '#535bf2';
 
   return (
     <>
@@ -23,7 +23,13 @@ export default function PageSecond() {
 
       <h2>Пример использования:</h2>
       <pre
-        style={{ background: '#1e1e1e', padding: '10px', borderRadius: '5px' }}
+        style={{
+          background: '#1e1e1e',
+          padding: '25px',
+          borderRadius: '25px',
+          whiteSpace: 'pre-wrap',
+          overflowX: 'auto',
+        }}
       >
         <code style={{ color: codeColor, display: 'block' }}>
           {`import { useState } from "react";
@@ -43,17 +49,21 @@ export default function FeedbackForm() {
   const handleSubmit = (e) => `}
           <span style={{ color: 'white', fontWeight: 'bold' }}>
             e.preventDefault()
-          </span>{`;`}
+          </span>
+          {`;`}
           {`
     alert("Сообщение отправлено!");
     setFormData({ name: "", email: "", message: "" });
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ maxWidth: "300px", margin: "20px auto", display: "flex", flexDirection: "column", gap: "10px" }}>
+    <form onSubmit={handleSubmit}>
       <input type="text" name="name" placeholder="Ваше имя" value={formData.name} onChange={handleChange} required />
+
       <input type="email" name="email" placeholder="Ваш email" value={formData.email} onChange={handleChange} required />
+
       <textarea name="message" placeholder="Сообщение" rows="4" value={formData.message} onChange={handleChange} required />
+
       <button type="submit">Отправить</button>
     </form>
   );
