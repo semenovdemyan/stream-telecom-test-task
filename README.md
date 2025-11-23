@@ -1,16 +1,77 @@
-# React + Vite
+# Stream Telecom Test Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Project Status](https://img.shields.io/badge/status-completed-brightgreen)
 
-Currently, two official plugins are available:
+## 🔗 Ссылка на сборку
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Готовая версия проекта доступна на GitHub Pages:  
+[https://semenovdemyan.github.io/stream-telecom-test-task/#/](https://semenovdemyan.github.io/stream-telecom-test-task/#/)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Технологии и стек
 
-## Expanding the ESLint configuration
+- **React 18** — для построения интерфейса
+- **React Router DOM v7** — для маршрутизации SPA (`HashRouter`)
+- **Vite** — сборка и разработка проекта
+- **JavaScript / TypeScript** — типизация и современный JS
+- **ESLint** — проверка кода на соответствие стандартам
+- **gh-pages** — деплой на GitHub Pages
+- **Sass / SCSS** — стилизация компонентов
+- **Mock API** — fallback данные через `mockData.json` при недоступности реального API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ⚡ Особенности проекта
+
+- SPA с клиентским роутингом через `HashRouter` (для корректной работы на статическом сервере GH Pages) 
+- Подгрузка пользователей с внешнего API с fallback на локальные mock-данные  
+- Четкая структура компонентов и маршрутов  
+- Автоматический деплой на GitHub Pages  
+
+---
+
+## 🚀 Локальный запуск проекта
+
+1. Клонируем репозиторий:
+
+```bash
+git clone https://github.com/semenovdemyan/stream-telecom-test-task.git
+cd stream-telecom-test-task
+```
+
+2. Устанавливаем зависимости и запускаем проект в режиме разработки:
+
+```bash
+npm i && npm run dev
+```
+
+3. В браузере открываем http://localhost:5173 если сайт не открылся автоматически
+ 
+4. Сборка проекта для продакшена:
+
+```bash
+npm run build
+```
+
+### Просмотр готовой сборки локально:
+
+```bash
+npm run preview
+```
+
+
+## 📦 Деплой на GitHub Pages
+1. Сборка проекта (включая 404.html для SPA):
+
+```bash
+npm run predeploy
+```
+
+2. Публикация на GitHub Pages:
+
+```bash
+npm run deploy
+```
+### После деплоя проект будет доступен по ссылке:
+https://semenovdemyan.github.io/stream-telecom-test-task/#/
