@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 import HeaderNav from '@/components/HeaderNav/HeaderNav';
 import Home from '@/routes/Home';
@@ -32,7 +32,7 @@ export default function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <HeaderNav className="container header-container" />
       <main className="container main-container">
         <Routes>
@@ -45,6 +45,6 @@ export default function App() {
           <Route path="/page-third" element={<PageThird />} />
         </Routes>
       </main>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
