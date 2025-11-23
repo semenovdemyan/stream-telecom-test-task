@@ -10,7 +10,13 @@ export default function Toggle() {
   }, [view]);
 
   const toggleView = () => {
-    setView((prev) => (prev === 'list' ? 'tiles' : 'list'));
+    const newValue = view === 'list' ? 'tiles' : 'list';
+    setView(newValue);
+    localStorage.setItem('viewMode', newValue);
+
+    window.dispatchEvent(
+      new CustomEvent('viewModeChange', { detail: newValue })
+    );
   };
 
   return (
@@ -18,9 +24,6 @@ export default function Toggle() {
       <button onClick={toggleView}>
         Отобразить {view === 'list' ? 'плиткой' : 'списком'}
       </button>
-      <div>
-        Отображение: <strong>{view}</strong>
-      </div>
     </div>
   );
 }

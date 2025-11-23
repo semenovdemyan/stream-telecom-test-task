@@ -21,7 +21,9 @@ export default function PageSecond() {
         события.
       </p>
 
-      <h2>Пример использования:</h2>
+      <h2>
+        Пример использования в&nbsp;форме обратной связи с&nbsp;handle submit:
+      </h2>
       <pre
         style={{
           background: '#1e1e1e',

@@ -6,11 +6,10 @@ export default function HeaderNav() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // При первой загрузке проверяем localStorage
   useEffect(() => {
     const savedPath = localStorage.getItem('activePath');
     if (savedPath && savedPath !== location.pathname) {
-      navigate(savedPath, { replace: true }); // Перенаправляем на сохранённый путь
+      navigate(savedPath, { replace: true });
     }
   }, []);
 
