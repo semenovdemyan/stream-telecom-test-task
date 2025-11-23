@@ -1,22 +1,27 @@
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import './HeaderNav.css';
 
 export default function HeaderNav() {
   const location = useLocation();
+  const navigate = useNavigate();
 
-  if (!localStorage.getItem('activePath')) {
-    localStorage.setItem('activePath', location.pathname);
-  }
-
-  const activePath = localStorage.getItem('activePath');
+  // При первой загрузке проверяем localStorage
+  useEffect(() => {
+    const savedPath = localStorage.getItem('activePath');
+    if (savedPath && savedPath !== location.pathname) {
+      navigate(savedPath, { replace: true }); // Перенаправляем на сохранённый путь
+    }
+  }, []);
 
   const handleClick = (path) => {
     localStorage.setItem('activePath', path);
   };
 
-  const getLinkClass = (path, isActive) => {
-    const active = isActive || activePath === path;
-    return `header-nav__link ${active ? 'header-nav__link--active' : ''}`;
+  const getLinkClass = (path) => {
+    return `header-nav__link ${
+      location.pathname === path ? 'header-nav__link--active' : ''
+    }`;
   };
 
   return (
@@ -26,7 +31,7 @@ export default function HeaderNav() {
           <NavLink
             to="/"
             end
-            className={({ isActive }) => getLinkClass('/', isActive)}
+            className={() => getLinkClass('/')}
             onClick={() => handleClick('/')}
           >
             Начальная страница
@@ -34,7 +39,7 @@ export default function HeaderNav() {
 
           <NavLink
             to="/page-first"
-            className={({ isActive }) => getLinkClass('/page-first', isActive)}
+            className={() => getLinkClass('/page-first')}
             onClick={() => handleClick('/page-first')}
           >
             Вопрос №1
@@ -42,7 +47,7 @@ export default function HeaderNav() {
 
           <NavLink
             to="/page-second"
-            className={({ isActive }) => getLinkClass('/page-second', isActive)}
+            className={() => getLinkClass('/page-second')}
             onClick={() => handleClick('/page-second')}
           >
             Вопрос №2
@@ -50,7 +55,7 @@ export default function HeaderNav() {
 
           <NavLink
             to="/page-third"
-            className={({ isActive }) => getLinkClass('/page-third', isActive)}
+            className={() => getLinkClass('/page-third')}
             onClick={() => handleClick('/page-third')}
           >
             Тестовая задача

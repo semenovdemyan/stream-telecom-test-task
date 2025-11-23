@@ -1,4 +1,5 @@
-import Toggle from "@/components/Toggle";
+import Toggle from '@/components/Toggle/Toggle';
+import TaskContent from '@/components/TaskContent/TaskContent';
 
 export default function PageThird() {
   const codeColor = '#535bf2';
@@ -25,10 +26,9 @@ export default function PageThird() {
         </ul>
         <h2>Результат:</h2>
       </section>
-<Toggle />
-      <section>
-
-			</section>
+      <Toggle />
+			<TaskContent />
+      <section></section>
     </>
   );
 }

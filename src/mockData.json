@@ -26,12 +26,5 @@
     "middleName": "Владимировна",
     "email": "olga.kuznetsova@example.com",
     "phone": "+7-915-987-65-43"
-  },
-  {
-    "surname": "Морозов",
-    "name": "Дмитрий",
-    "middleName": "Николаевич",
-    "email": "dmitry.morozov@example.com",
-    "phone": "+7-916-876-54-32"
   }
 ]
